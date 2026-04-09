@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>Muhammad Fahad Irfan | Computer Engineer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <nav>
+        <div class="logo">M. Fahad Irfan</div>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#portfolio">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header id="about" class="center-hero">
+        <div class="header-content reveal">
+            <div class="profile-img-container">
+                <img src="assets/profile.jpg" alt="Muhammad Fahad Irfan" class="profile-img">
+            </div>
+            
+            <h1>Muhammad Fahad Irfan</h1>
+            <p>Computer Engineer | C++ Systems Developer | Software Developer</p>
+            <p class="bio">I specialize in building high-performance, system-level C++ applications, hardware-accelerated software, and scalable AI/Web platforms. <strong>With over 1 year of hands-on experience in C++ software development and debugging</strong>, alongside a strong foundation in computer architecture, I engineer solutions that demand absolute performance and precision.</p>
+            <a href="#experience" class="btn">View My Experience</a>
+        </div>
+    </header>
+
+    <section id="experience" class="reveal">
+        <h2 style="text-align: center; margin-bottom: 50px;">Professional Experience</h2>
+        
+        <div class="experience-timeline">
+            <div class="timeline-item reveal">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div class="timeline-date">July 2025 – December 2025</div>
+                    <h3>Software Engineer</h3>
+                    <h4>Leapodonte | Paris, France</h4>
+                    <p>Developed and debugged features for a commercial 3D dental modeling CAD application (teeth-cad). Worked extensively with C++ and Rust to navigate and modify the FreeCAD source code. Resolved critical geometric rendering and logic bugs, including core model physics and issues, to ensure a stable software environment for end-users.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio">
+        <h2 class="reveal" style="text-align: center;">Engineering Portfolio</h2>
+        
+        <div class="filter-buttons reveal">
+            <button class="filter-btn active" data-filter="all">All Projects</button>
+            <button class="filter-btn" data-filter="cpp">C++ Software Dev</button>
+            <button class="filter-btn" data-filter="web-ai">Web, AI & Data</button>
+            <button class="filter-btn" data-filter="hardware">Robotics & Embedded</button>
+        </div>
+
+        <div class="carousel-container reveal">
+            <button class="carousel-btn prev-btn"><i class="fas fa-chevron-left"></i></button>
+            
+            <div class="project-grid">
+                
+                <div class="project-card flagship" data-category="cpp">
+                    <div class="project-image">
+                        <img src="assets/fdx.jpg" alt="Fad Downloader-X">
+                    </div>
+                    <div class="project-info">
+                        <h3>Fad Downloader-X (FDX)</h3>
+                        <p>The ultimate high-speed C++ download manager and advanced media sniffer. Engineered with a multi-threaded slicing engine for maximum bandwidth saturation and seamless Chrome browser integration via Native Messaging IPC.</p>
+                        <div class="tech-stack">
+                            <span>C++17</span> <span>libcurl</span> <span>wxWidgets</span> <span>Win32 API</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Fahad23104/Fad-Downloader-X" target="_blank"><i class="fab fa-github"></i> Source Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card flagship" data-category="cpp">
+                    <div class="project-image">
+                        <img src="assets/screenrecorder.jpg" alt="Fad Screen Recorder Pro">
+                    </div>
+                    <div class="project-info">
+                        <h3>Fad Screen Recorder</h3>
+                        <p>A zero-latency, hardware-accelerated broadcasting and capture suite. Bypasses standard memory copies by mapping GPU textures directly via DXGI, featuring true loopback WASAPI audio routing and FFmpeg encoding.</p>
+                        <div class="tech-stack">
+                            <span>C++20</span> <span>DirectX 11</span> <span>Dear ImGui</span> <span>WASAPI</span> <span>FFmpeg</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Fahad23104/Fad-Screen-Recorder" target="_blank"><i class="fab fa-github"></i> Source Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="hardware">
+                    <div class="project-image">
+                        <img src="assets/esp32vga.jpg" alt="ESP32 Wireless VGA Console">
+                    </div>
+                    <div class="project-info">
+                        <h3>ESP32 Wireless VGA Console</h3>
+                        <p>Designed a retro video game console using a single ESP32 to generate raw VGA video signals. It operates in Wi-Fi STA mode, hosting a web server that turns any smartphone into a wireless controller via HTTP GET requests.</p>
+                        <div class="tech-stack">
+                            <span>ESP32</span> <span>C++</span> <span>VGA Graphics</span> <span>WebSockets</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="web-ai">
+                    <div class="project-image">
+                        <img src="assets/mindmate.jpg" alt="MindMate AI Companion">
+                    </div>
+                    <div class="project-info">
+                        <h3>MindMate AI Companion</h3>
+                        <p>A comprehensive AI Mental Health Companion platform. Features include a full journal system with CRUD operations and search, real-time sentiment analysis, and a custom AI chatbot.</p>
+                        <div class="tech-stack">
+                            <span>React</span> <span>FastAPI</span> <span>MongoDB</span> <span>OpenChat AI</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="web-ai">
+                    <div class="project-image">
+                        <img src="assets/emotion.jpg" alt="Real-Time Facial Emotion">
+                    </div>
+                    <div class="project-info">
+                        <h3>Real-Time Facial Emotion</h3>
+                        <p>Developed a Python and OpenCV-based application to detect facial emotions using trained machine learning models, achieving ~70% detection accuracy in real-time webcam testing environments.</p>
+                        <div class="tech-stack">
+                            <span>Python</span> <span>OpenCV</span> <span>Machine Learning</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="hardware">
+                    <div class="project-image">
+                        <img src="assets/sumo.jpg" alt="Bluetooth SUMO Robot">
+                    </div>
+                    <div class="project-info">
+                        <h3>Bluetooth SUMO Robot</h3>
+                        <p><strong>🏆 1st Place Winner at CTS'24.</strong> Designed and built an autonomous/mobile-controlled Sumo robot for competitive combat using Arduino, sensors, and a Bluetooth module.</p>
+                        <div class="tech-stack">
+                            <span>Arduino</span> <span>Sensors</span> <span>Mechanical Design</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="hardware">
+                    <div class="project-image">
+                        <img src="assets/lfr.jpg" alt="Fire Extinguishing LFR">
+                    </div>
+                    <div class="project-info">
+                        <h3>Fire Extinguishing LFR</h3>
+                        <p>Built a line-following robot using a custom IR sensor PCB, integrated with a flame sensor and fire extinguisher mechanism to autonomously navigate and put out small flames.</p>
+                        <div class="tech-stack">
+                            <span>Arduino</span> <span>Custom PCB</span> <span>Sensors</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="hardware">
+                    <div class="project-image">
+                        <img src="assets/pcb.jpg" alt="Dual Output Power Supply">
+                    </div>
+                    <div class="project-info">
+                        <h3>Dual Output Power Supply</h3>
+                        <p>Designed and built a regulated 12V/5V DC power supply and an H-Bridge motor driver circuit for DC motor control, from Proteus simulation to physical PCB hardware implementation.</p>
+                        <div class="tech-stack">
+                            <span>Proteus CAD</span> <span>PCB Design</span> <span>Hardware Integration</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="web-ai">
+                    <div class="project-image">
+                        <img src="assets/boss.jpg" alt="BOSS Pakistan DBMS">
+                    </div>
+                    <div class="project-info">
+                        <h3>BOSS Pakistan DBMS</h3>
+                        <p>Designed and implemented a MySQL-based database for BOSS Pakistan's inventory and sales management, complete with comprehensive ER models and transaction handling.</p>
+                        <div class="tech-stack">
+                            <span>MySQL</span> <span>Database Design</span> <span>ER Models</span>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="project-card" data-category="cpp">
+                    <div class="project-image">
+                        <img src="assets/bus.jpg" alt="Terminal Bus Reservation System">
+                    </div>
+                    <div class="project-info">
+                        <h3>Terminal Bus Reservation System</h3>
+                        <p>Developed a robust terminal-based system enabling users to view seating, book tickets, and manage schedules utilizing efficient C++ file handling.</p>
+                        <div class="tech-stack">
+                            <span>C/C++</span> <span>File Handling</span> <span>CLI</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="cpp">
+                    <div class="project-image">
+                        <img src="assets/opensource.jpg" alt="Open Source GitHub Contribution">
+                    </div>
+                    <div class="project-info">
+                        <h3>Open-Source Bug Resolution</h3>
+                        <p>Actively contributed to open-source software by successfully debugging and resolving rendering issues in the 'teeth-cad' repository on GitHub.</p>
+                        <div class="tech-stack">
+                            <span>Open Source</span> <span>GitHub</span> <span>Debugging</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <button class="carousel-btn next-btn"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </section>
+
+    <section id="contact" class="reveal">
+        <h2>Let's Connect</h2>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/fahad23104" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            <a href="https://github.com/Fahad23104" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+            <a href="mailto:fahad.irfan300@gmail.com"><i class="fas fa-envelope"></i> fahad.irfan300@gmail.com</a>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
