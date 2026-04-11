@@ -52,11 +52,10 @@ nav {
 
 /* --- Hero Section --- */
 header {
-    /* min-height ensures it grows if you zoom in, rather than cutting off */
     min-height: 100vh; 
     display: flex;
     align-items: center;
-    padding: 120px 8% 50px 8%; /* Top padding prevents nav bar overlap */
+    padding: 120px 8% 50px 8%; 
 }
 
 .center-hero .header-content {
@@ -67,7 +66,6 @@ header {
     align-items: center;
 }
 
-/* Fluid Typography: Automatically scales between min and max sizes based on screen width */
 .header-content h1 {
     font-size: clamp(2.5rem, 6vw, 4rem); 
     color: #e6f1ff;
@@ -108,7 +106,6 @@ header {
 }
 
 .profile-img {
-    /* Responsive image sizing */
     width: clamp(140px, 20vw, 200px);
     height: clamp(140px, 20vw, 200px);
     border-radius: 50%;
@@ -243,12 +240,12 @@ header {
     gap: 30px;
     width: 100%;
     padding-bottom: 20px;
-    -ms-overflow-style: none; /* Hide scrollbar IE */
-    scrollbar-width: none;    /* Hide scrollbar Firefox */
+    -ms-overflow-style: none; 
+    scrollbar-width: none;    
 }
 
 .project-grid::-webkit-scrollbar {
-    display: none; /* Hide scrollbar Chrome/Safari */
+    display: none; 
 }
 
 .project-card {
@@ -269,7 +266,6 @@ header {
     overflow: hidden;
 }
 
-/* Dynamic Image heights based on screen size */
 .project-image img, .flagship .project-image img {
     width: 100%;
     height: clamp(200px, 40vw, 350px);
@@ -344,7 +340,6 @@ header {
     position: absolute;
     z-index: 10;
     transition: all 0.3s ease;
-    /* Aligns button with the image area so it NEVER blocks text */
     top: 25%; 
     transform: translateY(-50%);
 }
@@ -436,8 +431,22 @@ header {
         padding: 15px; 
     }
 
-    /* Hide buttons on mobile -> User natively swipes left/right */
-    .carousel-btn { 
-        display: none; 
+    /* 1. Fix Image Cropping on Mobile */
+    .project-image img, .flagship .project-image img {
+        height: 200px; /* Reduced height for smaller screens */
+        object-fit: contain; /* Shows 100% of the image without cropping */
+        background-color: #050d1a; /* Adds a darker background behind the image to fill space beautifully */
     }
+
+    /* 2. Show Small Arrows on Mobile */
+    .carousel-btn {
+        display: flex; /* Ensures they stay visible */
+        width: 35px; /* Smaller button for phones */
+        height: 35px;
+        font-size: 1rem;
+    }
+    
+    /* Bring arrows inside the screen edge */
+    .prev-btn { left: 0px; }
+    .next-btn { right: 0px; }
 }
