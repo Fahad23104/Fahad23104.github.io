@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // --- 2. Carousel Button Navigation (With Safety Checks) ---
+    // --- 2. Carousel Button Navigation ---
     const getScrollAmount = () => projectGrid.clientWidth + 30; // Card width + gap
 
     if (nextBtn) {
@@ -73,5 +73,31 @@ document.addEventListener("DOMContentLoaded", () => {
 
     reveals.forEach(reveal => {
         revealOnScroll.observe(reveal);
+    });
+
+    // --- 5. Image Modal (Lightbox) Logic ---
+    const modal = document.getElementById("image-modal");
+    const modalImg = document.getElementById("full-image");
+    const closeModalBtn = document.querySelector(".close-modal");
+    const projectImages = document.querySelectorAll(".project-image img");
+
+    // Open modal when image is clicked
+    projectImages.forEach(img => {
+        img.addEventListener("click", () => {
+            modal.style.display = "block";
+            modalImg.src = img.src; // Sets the popup image to match the clicked image
+        });
+    });
+
+    // Close modal when the 'X' is clicked
+    closeModalBtn.addEventListener("click", () => {
+        modal.style.display = "none";
+    });
+
+    // Close modal if user clicks anywhere outside the popup image
+    modal.addEventListener("click", (e) => {
+        if (e.target !== modalImg) {
+            modal.style.display = "none";
+        }
     });
 });
